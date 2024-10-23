@@ -23,7 +23,7 @@ public:
 	{
 		this->cedula = _cedula;
 	}
-	int getCedula()
+	int getCedula() const
 	{
 		return this->cedula;
 	}
@@ -32,7 +32,7 @@ public:
 	{
 		this->apellido = _apellido;
 	}
-	string getApellido()
+	string getApellido() const
 	{
 		return this->apellido;
 	}
@@ -41,7 +41,7 @@ public:
 	{
 		this->fechaRegistro = _fechaRegistro;
 	}
-	string getFechaRegistro()
+	string getFechaRegistro() const
 	{
 		return this->fechaRegistro;
 	}
