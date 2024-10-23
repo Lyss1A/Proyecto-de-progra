@@ -67,6 +67,65 @@ public:
 		    }
 	}
 
+void setActualizarPacientes() 
+{
+	int cedula;
+	bool buscar;
+	string nombre, telefono, correo, apellido, fechaRegistro;
+
+	if (listaPacientes.empty())
+	{
+		cout << "No hay datos que mostrar... Agrega un paciente para buscarlo." << endl;
+	}
+
+	else
+	{
+		buscar = true;
+		for (int i = 0; i < listaPacientes.size(); i++) {
+			if (listaPacientes[i]->getCedula() == cedula && typeid(*listaPacientes[i]) == typeid (Pacientes))
+			{
+				cout << "Ingrese el nombre del paciente: ";
+				cin >> nombre;
+
+				cout << "Ingrese el apellido del paciente: ";
+				cin >> apellido;
+
+				cout << "Ingrese el telefono del paciente: ";
+				cin >> telefono;
+
+				cout << "Ingrese el correo del paciente: ";
+				cin >> correo;
+
+				cout << "Ingrese la fecha de registro del paciente: ";
+				cin >> fechaRegistro;
+
+				if (nombre.empty() || apellido.empty() || telefono.empty() || correo.empty() || fechaRegistro.empty())
+				{
+					cout << "No se permiten campos vacios" << endl;
+					return;
+				}
+
+				Pacientes* newPaciente = new Pacientes(nombre, telefono, correo, apellido, cedula, fechaRegistro);
+				listaPacientes.push_back(newPaciente);
+
+				cout << "Paciente registrado con exito" << endl;
+
+				for (int i = 0; i < listaPacientes.size(); i++)
+				{
+					listaPacientes[i]->getMostrarDatos();
+
+				}
+			}
+		}	
+		if (!buscar)
+		{
+			buscar = false;
+			cout << "No se ha registrado un paciente con ese num° de cedula..." << endl;
+
+		}
+	}
+}
+
 	void menuPacientes()
 	{
 		system("cls");
