@@ -20,36 +20,36 @@ public:
 
 	//metodos setter y getter
 	
-	void setNombre(string _nombre)
+	void setNombre(const string _nombre)
 	{
 		this->nombre = _nombre;
 	}
 
-	string getNombre()
+	const string getNombre() const
 	{
 		return this->nombre;
 	}
 
-	void setTelefono(string _telefono)
+	void setTelefono(const string _telefono)
 	{
 		this->telefono = _telefono;
 	}
-	string getTelefono()
+	const string getTelefono() const
 	{
 		return this->telefono;
 	}
-	void setCorreo(string _correo)
+	void setCorreo(const string _correo)
 	{
 		this->correo = _correo;
 	}
-	string getCorreo()
+	const string getCorreo() const
 	{
 		return this->correo;
 	}
 
 	//Metodo que muestra datos de la persona utilizando polimosrfismo
 
-	virtual void getMostrarDatos()
+	virtual void getMostrarDatos() const
 	{
 		cout << "Nombre: " << this->nombre << endl;
 		cout << "Telefono: " << this->telefono << endl;
