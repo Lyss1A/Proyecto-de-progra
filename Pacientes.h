@@ -19,35 +19,36 @@ public:
 
 	//metodos setter y getter
 
-	void setCedula(int _cedula)
+	void setCedula(const int _cedula)
 	{
 		this->cedula = _cedula;
 	}
-	int getCedula()
+
+	const int getCedula() const
 	{
 		return this->cedula;
 	}
 
-	void setApellido(string _apellido)
+	void setApellido(const string _apellido)
 	{
 		this->apellido = _apellido;
 	}
-	string getApellido()
+	const string getApellido() const
 	{
 		return this->apellido;
 	}
 
-	void setFechaRegistro(string _fechaRegistro)
+	void setFechaRegistro(const string _fechaRegistro)
 	{
 		this->fechaRegistro = _fechaRegistro;
 	}
-	string getFechaRegistro()
+	const string getFechaRegistro() const
 	{
 		return this->fechaRegistro;
 	}
 
 	//Metodo que muestra datos del paciente utilizando polimosrfismo
-	void getMostrarDatos() override
+	void getMostrarDatos() const override
 	{
 		cout << "................Datos del paciente............" << endl;
 		Persona::getMostrarDatos();
