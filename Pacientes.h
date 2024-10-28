@@ -54,6 +54,7 @@ public:
 		Persona::getMostrarDatos();
 		cout << "Apellido: " << getApellido() << endl;
 		cout << "Cedula: " << getCedula() << endl;
+		cout << "Fecha registro: " << getFechaRegistro() << endl;
 		cout << "..............................................." << endl;
 	}
 	
